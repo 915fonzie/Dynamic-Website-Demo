@@ -1,0 +1,62 @@
+.biking1,
+.biking2,
+.biking3 {
+  min-height: 90vh;
+  @include flex(center, center, row);
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.biking-img {
+  height: 70vh;
+  flex-basis: 30rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.biking-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+  h1 {
+    font-size: 6rem;
+    padding: 5rem 0rem;
+  }
+  p {
+    font-size: 2rem;
+    padding: 2rem 2rem 0rem 0rem;
+    margin-bottom: 10rem;
+  }
+}
+.biking1 h1 {
+  color: $color-orange;
+}
+.biking2 h1 {
+  color: $color-purple;
+}
+.biking3 h1 {
+  color: $color-blue;
+}
+.biking-nr1,
+.biking-nr2,
+.biking-nr3 {
+  font-size: 15rem;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  opacity: 0.3;
+}
+.biking-nr1 {
+  color: $color-orange;
+}
+.biking-nr2 {
+  color: $color-purple;
+}
+.biking-nr3 {
+  color: $color-blue;
+}

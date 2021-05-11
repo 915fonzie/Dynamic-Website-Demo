@@ -9,12 +9,6 @@ function animateSlides() {
   //Select things
   const sliders = document.querySelectorAll(".slide");
   const nav = document.querySelector(".nav-header");
-  gsap.fromTo(
-    ".nav-header",
-    1,
-    { y: "-100%" },
-    { y: "0%", ease: "power2.inOut" }
-  );
   //loop over each slide
   sliders.forEach((slide, index, slides) => {
     const revealImg = slide.querySelector(".reveal-img");
@@ -34,11 +28,11 @@ function animateSlides() {
       reverse: false,
     })
       .setTween(slideTl)
-    //   .addIndicators({
-    //     colorStart: "white",
-    //     colorTrigger: "white",
-    //     name: "slide",
-    //   })
+      //   .addIndicators({
+      //     colorStart: "white",
+      //     colorTrigger: "white",
+      //     name: "slide",
+      //   })
       .addTo(controller);
     //New Animation
     const pageTl = gsap.timeline();
@@ -113,14 +107,34 @@ barba.init({
         slideScene.destroy();
         pageScene.destroy();
         controller.destroy();
-        gsap.killTweensOf(".title-swipe");
       },
     },
     {
       namespace: "fashion",
       beforeEnter() {
         logo.href = "../";
-        gsap.killTweensOf(".title-swipe");
+        detailAnimation();
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
+    {
+      namespace: "mountain",
+      beforeEnter() {
+        logo.href = "../";
+        detailAnimation();
+      },
+      beforeLeave() {
+        controller.destroy();
+        detailScene.destroy();
+      },
+    },
+    {
+      namespace: "biking",
+      beforeEnter() {
+        logo.href = "../";
         detailAnimation();
       },
       beforeLeave() {
@@ -177,7 +191,7 @@ function detailAnimation() {
     const nextImg = nextSlide.querySelector("img");
     slideTl.fromTo(slide, { opacity: 1 }, { opacity: 0 });
     slideTl.fromTo(nextSlide, { opacity: 0 }, { opacity: 1 }, "-=1");
-    slideTl.fromTo(nextImg, { x: "50%" }, { x: "0%" });
+    slideTl.fromTo(nextImg, { x: "175%" }, { x: "0%" });
     //scene
     detailScene = new ScrollMagic.Scene({
       triggerElement: slide,

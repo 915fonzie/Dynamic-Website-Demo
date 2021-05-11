@@ -1,0 +1,62 @@
+.mountain1,
+.mountain2,
+.mountain3 {
+  min-height: 90vh;
+  @include flex(center, center, row);
+  width: 70%;
+  margin: auto;
+  color: white;
+  margin-top: 5rem;
+  flex-wrap: wrap;
+  position: relative;
+}
+.mountain-img {
+  height: 70vh;
+  flex-basis: 30rem;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.mountain-text {
+  flex: 1;
+  position: relative;
+  flex-basis: 25rem;
+  h1 {
+    font-size: 6rem;
+    padding: 5rem 0rem;
+  }
+  p {
+    font-size: 2rem;
+    padding: 2rem 2rem 0rem 0rem;
+    margin-bottom: 10rem;
+  }
+}
+.mountain1 h1 {
+  color: $color-orange;
+}
+.mountain2 h1 {
+  color: $color-purple;
+}
+.mountain3 h1 {
+  color: $color-blue;
+}
+.mountain-nr1,
+.mountain-nr2,
+.mountain-nr3 {
+  font-size: 15rem;
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  opacity: 0.3;
+}
+.mountain-nr1 {
+  color: $color-orange;
+}
+.mountain-nr2 {
+  color: $color-purple;
+}
+.mountain-nr3 {
+  color: $color-blue;
+}

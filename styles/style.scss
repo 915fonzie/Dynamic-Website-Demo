@@ -12,6 +12,8 @@ $color-orange: rgb(255, 139, 93);
 @import "./global";
 @import "./intro";
 @import "./fashion";
+@import "./mountains";
+@import "./biking";
 
 @media screen and (max-width: 1500px) {
   .hero-img {
