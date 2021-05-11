@@ -1,0 +1,104 @@
+$color-blue: rgb(86, 124, 228);
+$color-purple: rgb(167, 110, 231);
+$color-orange: rgb(255, 139, 93);
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "./global";
+@import "./intro";
+@import "./fashion";
+
+@media screen and (max-width: 1500px) {
+  .hero-img {
+    height: 50vh;
+  }
+  .fashion-text {
+    h1 {
+      font-size: 2rem;
+      padding: 1rem 0rem;
+    }
+    p {
+      font-size: 1.2rem;
+    }
+  }
+  .fashion-img img {
+    height: 50vh;
+    object-position: top;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main {
+    width: 100%;
+    margin: 0;
+  }
+  .slide {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-desc {
+    padding: 0;
+  }
+  .hero-desc {
+    h2 {
+      font-size: 1.6rem;
+      padding: 1rem 0rem;
+    }
+    p {
+      padding: 2rem 1rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      text-align: center;
+    }
+  }
+  .hero-img {
+    padding: 4rem;
+  }
+  .explore {
+    width: 60%;
+    margin: auto;
+  }
+  .details-slide {
+    width: 100%;
+    text-align: center;
+  }
+  .fashion-text {
+    p {
+      margin-bottom: 5rem;
+      padding: 0;
+    }
+    h1 {
+      margin: 2rem 0rem;
+    }
+  }
+  .fashion-nr1,
+  .fashion-nr2,
+  .fashion-nr3 {
+    font-size: 8rem;
+    bottom: 20%;
+  }
+  .nav-links {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .nav-bar {
+    display: block;
+  }
+  .contact {
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2rem;
+      padding: 2rem;
+      text-align: center;
+    }
+  }
+}
